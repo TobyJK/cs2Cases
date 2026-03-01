@@ -49,7 +49,7 @@ elif choice == 3:
     writeData("collections")
 
 elif choice == 4:
-    print("int caseid (pk), str name")
+    print("int caseid (pk), str name, str type")
     writeData("cases")
 
 else:

@@ -42,7 +42,7 @@ fields = {
     "skins" : ["name", [0, "weaponid"], [0, "quality"], [1, "minFloat"], [1, "maxFloat"], [2, "stattrak"], [2, "souvenir"], [2, "hasRarePattern"], [0, "collectionid"]],
     "stickers" : ["name", [0, "quality"], [0, "collectionid"]],
     "collections" : ["name"],
-    "cases" : ["name"],
+    "cases" : ["name", "type"],
     "collectionCases" : [[0, "collectionid"], [0, "caseid"]]
 }
 
@@ -86,7 +86,7 @@ stickers = readData("stickers")
 """
 collections = readData("collections")
 
-"""int caseid (pk), str name
+"""int caseid (pk), str name, str type
 """
 cases = readData("cases")
 
