@@ -1,5 +1,7 @@
-if __name__ == "main":
-    pass
+"""file containing case class and a list of cases
+"""
+
+import database
 
 qualities = {
     0 : "grey",
