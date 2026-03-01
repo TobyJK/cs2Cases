@@ -90,6 +90,6 @@ collections = readData("collections")
 """
 cases = readData("cases")
 
-"""int id, int collectionid (fk ck), int caseid (fk ck)
+"""int id (pk), int collectionid (fk), int caseid (fk)
 """
 collectionCases = readData("collectionCases")
