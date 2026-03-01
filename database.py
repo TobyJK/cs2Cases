@@ -36,32 +36,60 @@ weapons = {
     51: 'Survival Knife', 52: 'Talon Knife', 53: 'Ursus Knife'
 }
 
-"""int id (pk), name, weaponid (fk), int quality (fk), float minFloat, float maxFloat, bool stattrak, bool souvenir, bool hasRarePattern, int collectionid (fk)
-"""
-skins = {
+"""[0, x] means int, [1, x] means float, [2, x] means bool"""
 
+fields = {
+    "skins" : ["name", [0, "weaponid"], [0, "quality"], [1, "minFloat"], [1, "maxFloat"], [2, "stattrak"], [2, "souvenir"], [2, "hasRarePattern"], [0, "collectionid"]],
+    "stickers" : ["name", [0, "quality"], [0, "collectionid"]],
+    "collections" : ["name"],
+    "cases" : ["name"],
+    "collectionCases" : [[0, "collectionid"], [0, "caseid"]]
 }
 
-"""int id (pk), int quality (fk), int collectionid (fk)
-"""
-stickers = {
+def dataValidation(fields, data):
+    ret = []
+    for i in range(len(fields)):
+        a, b = fields[i], data[i]
+        if type(a) is list:
+            if a[0] == 0:
+                b = int(b)
+            elif a[0] == 1:
+                b = float(b)
+            else:
+                b = eval(b)
+            a = a[1]
+        ret.append([a, b])
+    return ret
 
-}
+# database files are in the data/ folder
+# create a function to read data from text file
+def readData(name):
+    with open(f"data/{name}.txt") as f:
+        d = {}
+        for line in f:
+            l = line.strip()
+            data = l.split(",")
+            key = int(data.pop(0))
+            d[key] = {x[0] : x[1] for x in dataValidation(fields[name], data)}
+    return d
+
+
+"""int id (pk), str name, int weaponid (fk), int quality (fk), float minFloat, float maxFloat, bool stattrak, bool souvenir, bool hasRarePattern, int collectionid (fk)
+"""
+skins = readData("skins")
+
+"""int id (pk), str name, int quality (fk), int collectionid (fk)
+"""
+stickers = readData("stickers")
 
 """int collectionid (pk), str name
 """
-collections = {
-
-}
+collections = readData("collections")
 
 """int caseid (pk), str name
 """
-cases = {
-    
-}
+cases = readData("cases")
 
-"""int collectionid (fk ck), int caseid (fk ck)
+"""int id, int collectionid (fk ck), int caseid (fk ck)
 """
-collectionCases = {
-
-}
+collectionCases = readData("collectionCases")
