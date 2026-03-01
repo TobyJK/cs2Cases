@@ -3,22 +3,6 @@
 
 import database
 
-qualities = {
-    0 : "grey",
-    1 : "light blue",
-    2 : "blue",
-    3 : "purple",
-    4 : "pink",
-    5 : "red",
-    6 : "gold"
-}
-
-stattrak = {
-    0 : None,
-    1 : "StatTrak",
-    2 : "Souvenir"
-}
-
 class container:
     def __init__(self, caseType, name, cost, itemDict, stat, minQ, maxQ):
         self.name = f"{name.capitalize} {caseType.capitalize}"
