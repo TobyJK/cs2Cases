@@ -1,0 +1,9 @@
+0,Lightning Strike,12,5,0,0.08,True,False,False,0
+1,Case Hardened,10,4,0,1,True,False,True,0
+2,Hypnotic,1,4,0,0.08,True,False,False,0
+3,Dark Water,16,3,0.1,0.26,True,False,False,0
+4,Dragon Tattoo,4,3,0,0.08,True,False,False,0
+5,Dark Water,9,3,0.1,0.26,True,False,False,0
+6,Wings,11,2,0,0.14,True,False,False,0
+7,Skulls,23,2,0.1,0.26,True,False,False,0
+8,Ultraviolet,19,2,0.06,0.8,True,False,False,0
