@@ -1,0 +1,60 @@
+0,CS:GO Weapon,Case
+1,eSports 2013,Case
+2,Operation Bravo,Case
+3,CS:GO Weapon Case 2,Case
+4,eSports 2013 Winter,Case
+5,Winter Offensive,Case
+6,CS:GO Weapon Case 3,Case
+7,Operation Phoenix,Case
+8,Huntsman,Case
+9,Operation Breakout,Case
+10,eSports 2014 Summer,Case
+11,Operation Vanguard,Case
+12,Chroma,Case
+13,Chroma 2,Case
+14,Falchion,Case
+15,Shadow,Case
+16,Revolver,Case
+17,Operation Wildfire,Case
+18,Chroma 3,Case
+19,Gamma,Case
+20,Gamma 2,Case
+21,Glove,Case
+22,Spectrum,Case
+23,Operation Hydra,Case
+24,Spectrum 2,Case
+25,Clutch,Case
+26,Horizon,Case
+27,Danger Zone,Case
+28,Prisma,Case
+29,CS20,Case
+30,Shattered Web,Case
+31,Prisma 2,Case
+32,Fracture,Case
+33,Operation Broken Fang,Case
+34,Snakebite,Case
+35,Operation Riptide,Case
+36,Dreams & Nightmares,Case
+37,Recoil,Case
+38,Revolution,Case
+39,Kilowatt,Case
+40,Gallery,Case
+41,Fever,Case
+42,Ancient,Souvenir
+43,Anubis,Souvenir
+44,Cache,Souvenir
+45,Cobblestone,Souvenir
+46,Dust II,Souvenir
+47,2021 Dust II,Souvenir
+48,Inferno,Souvenir
+49,2018 Inferno,Souvenir
+50,Mirage,Souvenir
+51,2021 Mirage,Souvenir
+52,Nuke,Souvenir
+53,2018 Nuke,Souvenir
+54,Overpass,Souvenir
+55,2024 Overpass,Souvenir
+56,Train,Souvenir
+57,2025 Train,Souvenir
+58,Vertigo,Souvenir
+59,2021 Vertigo,Souvenir

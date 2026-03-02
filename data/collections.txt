@@ -1,0 +1,89 @@
+0,Arms Deal
+1,eSports 2013
+2,Bravo
+3,Arms Deal 2
+4,eSports 2013 Winter
+5,Winter Offensive
+6,Arms Deal 3
+7,Phoenix
+8,Huntsman
+9,Breakout
+10,eSports 2014 Summer
+11,Vanguard
+12,Chroma
+13,Chroma 2
+14,Falchion
+15,Shadow
+16,Revolver Case
+17,Wildfire
+18,Chroma 3
+19,Gamma
+20,Gamma 2
+21,Glove
+22,Spectrum
+23,Operation Hydra
+24,Spectrum 2
+25,Horizon
+26,Danger Zone
+27,Clutch
+28,Prisma
+29,CS20
+30,Shattered Web
+31,Prisma 2
+32,Fracture
+33,Operation Broken Fang
+34,Snakebite
+35,Operation Riptide
+36,Dreams & Nightmares
+37,Recoil
+38,Revolution
+39,Kilowatt
+40,Gallery
+41,Fever
+42,Assault
+43,Nuke
+44,Vertigo
+45,Office
+46,Militia
+47,Aztec
+48,Dust
+49,Inferno
+50,Alpha
+51,Safehouse
+52,Italy
+53,Train
+54,Lake
+55,Dust 2
+56,Mirage
+57,Bank
+58,Baggage
+59,Overpass
+60,Cobblestone
+61,Cache
+62,Gods and Monsters
+63,Rising Sun
+64,Chop Shop
+65,2018 Nuke
+66,2018 Inferno
+67,Blacksite
+68,X-Ray
+69,Canals
+70,St. Marc
+71,Norse
+72,Havoc
+73,Control
+74,Ancient
+75,2021 Dust 2
+76,2021 Vertigo
+77,2021 Train
+78,2021 Mirage
+79,Anubis
+80,Overpass 2024
+81,Graphic Design
+82,Sport & Field
+83,Train 2025
+84,Ascent
+85,Boreal
+86,Radiant
+87,Harlequin
+88,Achroma
