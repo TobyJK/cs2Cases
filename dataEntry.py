@@ -57,7 +57,7 @@ elif choice == 5:
     writeData("collectionCases")
 
 elif choice == 6:
-    print("int id (pk), str name, int weaponid (fk), int quality (fk), float minFloat, float maxFloat, bool stattrak, bool hasRarePattern, int knifeCollectionid (fk)")
+    print("int id (pk), str name, int weaponid (fk), float minFloat, float maxFloat, bool hasRarePattern, int knifeCollectionid (fk)")
     writeData("knives")
 
 elif choice == 7:

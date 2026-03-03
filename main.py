@@ -21,14 +21,25 @@ stickers = pd.DataFrame.from_dict(database.stickers, orient='index')
 collections = pd.DataFrame.from_dict(database.collections, orient='index')
 cases = pd.DataFrame.from_dict(database.cases, orient='index')
 collectionCases = pd.DataFrame.from_dict(database.collectionCases, orient='index')
+knives = pd.DataFrame.from_dict(database.knives, orient='index')
+knifeCollections = pd.DataFrame.from_dict(database.knifeCollections, orient='index')
+knifeCollectionCases = pd.DataFrame.from_dict(database.knifeCollectionCases, orient='index')
 
 def getSkinsFromCase(name):
     cNumber = cases[cases["name"] == name].index[0]
     col = collectionCases.loc[collectionCases["caseid"] == cNumber]["collectionid"].iloc[0]
     s = skins[skins["collectionid"] == col]
-    s = s[["name", "quality", "minFloat", "maxFloat", "hasRarePattern"]]
+    s = s[["name", "weaponid", "quality", "minFloat", "maxFloat", "hasRarePattern"]]
 
     return s
+
+def getKnivesFromCase(name):
+    cNumber = cases[cases["name"] == name].index[0]
+    col = knifeCollectionCases.loc[knifeCollectionCases["caseid"] == cNumber]["knifeCollectionid"].iloc[0]
+    k = knives[knives["knifeCollectionid"] == col]
+    k = k[["name", "weaponid", "minFloat", "maxFloat", "hasRarePattern"]]
+
+    return k
 
 # get odds for case
 def getOdds(minQ, maxQ):
@@ -64,6 +75,7 @@ def caseOpenFromName(name):
     skinsPossible = getSkinsFromCase(name)
     if cType == "case":
         quals, odds = getOdds(2, 6)
+        knivesPossible = getKnivesFromCase(name)
 
     elif cType == "souvenir":
         quals, odds = getOdds(min(skinsPossible["quality"]), max(skinsPossible["quality"]))
@@ -71,7 +83,10 @@ def caseOpenFromName(name):
     qualityChosen = random.choices(quals, odds)[0]
 
     if cType == "case":
-        skinsPossiblyChosen = skinsPossible[skinsPossible["quality"] == qualityChosen]
+        if qualityChosen == 6:
+            chosen = knivesPossible.sample()
+        else:
+            chosen = skinsPossible[skinsPossible["quality"] == qualityChosen].sample()
 
     elif cType == "souvenir":
-        skinChosen = skinsPossible[skinsPossible["quality"] == qualityChosen].sample()
+        chosen = skinsPossible[skinsPossible["quality"] == qualityChosen].sample()

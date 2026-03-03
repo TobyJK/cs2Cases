@@ -40,7 +40,7 @@ weapons = {
 
 fields = {
     "skins" : ["name", [0, "weaponid"], [0, "quality"], [1, "minFloat"], [1, "maxFloat"], [2, "stattrak"], [2, "souvenir"], [2, "hasRarePattern"], [0, "collectionid"]],
-    "knives" : ["name", [0, "weaponid"], [0, "quality"], [1, "minFloat"], [1, "maxFloat"], [2, "stattrak"], [2, "hasRarePattern"], [0, "knifeCollectionid"]],
+    "knives" : ["name", [0, "weaponid"], [1, "minFloat"], [1, "maxFloat"], [2, "hasRarePattern"], [0, "knifeCollectionid"]],
     "stickers" : ["name", [0, "quality"], [0, "collectionid"]],
     "collections" : ["name"],
     "knifeCollections" : ["name"],
@@ -97,7 +97,7 @@ cases = readData("cases")
 """
 collectionCases = readData("collectionCases")
 
-"""int id (pk), str name, int weaponid (fk), int quality (fk), float minFloat, float maxFloat, bool stattrak, bool hasRarePattern, int knifeCollectionid (fk)
+"""int id (pk), str name, int weaponid (fk), float minFloat, float maxFloat, bool hasRarePattern, int knifeCollectionid (fk)
 """
 knives = readData("knives")
 
