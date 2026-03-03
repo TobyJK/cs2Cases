@@ -40,10 +40,13 @@ weapons = {
 
 fields = {
     "skins" : ["name", [0, "weaponid"], [0, "quality"], [1, "minFloat"], [1, "maxFloat"], [2, "stattrak"], [2, "souvenir"], [2, "hasRarePattern"], [0, "collectionid"]],
+    "knives" : ["name", [0, "weaponid"], [0, "quality"], [1, "minFloat"], [1, "maxFloat"], [2, "stattrak"], [2, "hasRarePattern"], [0, "knifeCollectionid"]],
     "stickers" : ["name", [0, "quality"], [0, "collectionid"]],
     "collections" : ["name"],
+    "knifeCollections" : ["name"],
     "cases" : ["name", "type"],
-    "collectionCases" : [[0, "collectionid"], [0, "caseid"]]
+    "collectionCases" : [[0, "collectionid"], [0, "caseid"]],
+    "knifeCollectionCases" : [[0, "knifeCollectionid"], [0, "caseid"]]
 }
 
 def dataValidation(fields, data):
@@ -93,3 +96,15 @@ cases = readData("cases")
 """int id (pk), int collectionid (fk), int caseid (fk)
 """
 collectionCases = readData("collectionCases")
+
+"""int id (pk), str name, int weaponid (fk), int quality (fk), float minFloat, float maxFloat, bool stattrak, bool hasRarePattern, int knifeCollectionid (fk)
+"""
+knives = readData("knives")
+
+"""int knifeCollectionid (pk), str name
+"""
+knifeCollections = readData("knifeCollections")
+
+"""int id (pk), int knifeCollectionid (fk), int caseid (fk)
+"""
+knifeCollectionCases = readData("knifeCollectionCases")
