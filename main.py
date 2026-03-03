@@ -26,10 +26,9 @@ def getSkinsFromCase(name):
     cNumber = cases[cases["name"] == name].index[0]
     col = collectionCases.loc[collectionCases["caseid"] == cNumber]["collectionid"].iloc[0]
     s = skins[skins["collectionid"] == col]
-    statOrSouv = "stat" if s["stattrak"].iloc[0] else "souv" if s["souvenir"].iloc[0] else False
     s = s[["name", "quality", "minFloat", "maxFloat", "hasRarePattern"]]
 
-    return s, statOrSouv
+    return s
 
 # get odds for case
 def getOdds(minQ, maxQ):
@@ -58,3 +57,21 @@ def getOdds(minQ, maxQ):
         return qualities, odds
     
     return qualities, [5 ** x for x in range(maxQ - minQ + 1)]
+
+# open a given case
+def caseOpenFromName(name):
+    cType = cases[cases["name"] == name]["type"].iloc[0].lower()
+    skinsPossible = getSkinsFromCase(name)
+    if cType == "case":
+        quals, odds = getOdds(2, 6)
+
+    elif cType == "souvenir":
+        quals, odds = getOdds(min(skinsPossible["quality"]), max(skinsPossible["quality"]))
+    
+    qualityChosen = random.choices(quals, odds)[0]
+
+    if cType == "case":
+        skinsPossiblyChosen = skinsPossible[skinsPossible["quality"] == qualityChosen]
+
+    elif cType == "souvenir":
+        skinChosen = skinsPossible[skinsPossible["quality"] == qualityChosen].sample()
