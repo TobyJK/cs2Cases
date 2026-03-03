@@ -30,3 +30,31 @@ def getSkinsFromCase(name):
     s = s[["name", "quality", "minFloat", "maxFloat", "hasRarePattern"]]
 
     return s, statOrSouv
+
+# get odds for case
+def getOdds(minQ, maxQ):
+    qualities = [x for x in range(maxQ, minQ - 1, -1)]
+    
+    if maxQ == 6:
+        return qualities, [2] + [5 ** (x+1) for x in range(maxQ - minQ)]
+    
+    if minQ <= 1:
+        odds = []
+        last = None
+        for i in range(len(qualities)):
+            if not last:
+                odds.append(1)
+                last = 1
+                continue
+
+            if qualities[i] == 1:
+                last = (last // 5) * 24
+                odds.append(last)
+                continue
+
+            last *= 5
+            odds.append(last)
+        
+        return qualities, odds
+    
+    return qualities, [5 ** x for x in range(maxQ - minQ + 1)]
