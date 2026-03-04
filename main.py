@@ -24,6 +24,7 @@ collectionCases = pd.DataFrame.from_dict(database.collectionCases, orient='index
 knives = pd.DataFrame.from_dict(database.knives, orient='index')
 knifeCollections = pd.DataFrame.from_dict(database.knifeCollections, orient='index')
 knifeCollectionCases = pd.DataFrame.from_dict(database.knifeCollectionCases, orient='index')
+rarePatterns = pd.DataFrame.from_dict(database.rarePatterns, orient='index')
 
 def getSkinsFromCase(name):
     cNumber = cases[cases["name"] == name].index[0]
@@ -89,6 +90,13 @@ def assignFloat(skin):
 
     return [finalFloat, finalWear]
 
+# assign a rare pattern if one exists
+def assignRarePattern(skin : pd.DataFrame):
+    patterns = rarePatterns[(rarePatterns["skinOrKnife"] == "skin") & (rarePatterns["skinid"] == skin.index[0])]
+    pattern = random.choices(list(patterns.index) + [None], list(patterns["patternChance"]) + [1 - sum(patterns["patternChance"])])[0]
+
+    return pattern
+
 # open a given case
 def caseOpenFromName(name):
     cType = cases[cases["name"] == name]["type"].iloc[0].lower()
@@ -101,6 +109,7 @@ def caseOpenFromName(name):
         quals, odds = getOdds(min(skinsPossible["quality"]), max(skinsPossible["quality"]))
     
     qualityChosen = random.choices(quals, odds)[0]
+    qualityChosen = 4
 
     if cType == "case":
         if qualityChosen == 6:
@@ -112,3 +121,6 @@ def caseOpenFromName(name):
         chosen = skinsPossible[skinsPossible["quality"] == qualityChosen].sample()
 
     skinFloat, wear = assignFloat(chosen)
+
+    if chosen["hasRarePattern"].iloc[0]:
+        pattern = assignRarePattern(chosen)
