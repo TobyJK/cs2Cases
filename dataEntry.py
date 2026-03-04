@@ -30,7 +30,7 @@ def writeData(name):
             f.write(f"{nextID},{write}\n")
             nextID += 1
 
-print("Which database would you like to add to? \n1 for skins, 2 for stickers, 3 for collections, 4 for cases, 5 for collectionCases, 6 for knives, 7 for knifeCollections, 8 for knifeCollectionCases.")
+print("Which database would you like to add to? \n1 for skins, 2 for stickers, 3 for collections, 4 for cases, 5 for collectionCases, 6 for knives, 7 for knifeCollections, 8 for knifeCollectionCases, 9 for rarePatterns.")
 try:
     choice = int(input("Enter a number: "))
 except:
@@ -64,6 +64,10 @@ elif choice == 7:
     print("int knifeCollectionid (pk), str name")
     writeData("knifeCollections")
 
-else:
+elif choice == 8:
     print("int id (pk), int knifeCollectionid (fk), int caseid (fk)")
     writeData("knifeCollectionCases")
+
+else:
+    print("int id (pk), str patternName, str skinOrKnife, int skinid (fk), float patternChance")
+    writeData("rarePatterns")

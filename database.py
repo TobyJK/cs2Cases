@@ -54,7 +54,8 @@ fields = {
     "knifeCollections" : ["name"],
     "cases" : ["name", "type"],
     "collectionCases" : [[0, "collectionid"], [0, "caseid"]],
-    "knifeCollectionCases" : [[0, "knifeCollectionid"], [0, "caseid"]]
+    "knifeCollectionCases" : [[0, "knifeCollectionid"], [0, "caseid"]],
+    "rarePatterns" : ["name", "skinOrKnife", [0, "skinid"], [1, "patternChance"]]
 }
 
 def dataValidation(fields, data):
@@ -116,3 +117,7 @@ knifeCollections = readData("knifeCollections")
 """int id (pk), int knifeCollectionid (fk), int caseid (fk)
 """
 knifeCollectionCases = readData("knifeCollectionCases")
+
+"""int id (pk), str patternName, str skinOrKnife, int skinid (fk), float patternChance
+"""
+rarePatterns = readData("rarePatterns")
