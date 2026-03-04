@@ -109,7 +109,6 @@ def caseOpenFromName(name):
         quals, odds = getOdds(min(skinsPossible["quality"]), max(skinsPossible["quality"]))
     
     qualityChosen = random.choices(quals, odds)[0]
-    qualityChosen = 4
 
     if cType == "case":
         if qualityChosen == 6:
