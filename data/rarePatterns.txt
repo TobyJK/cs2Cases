@@ -1,2 +1,2 @@
-0,Tier 1 Blue Gem,skin,1,0.07
+0,Tier 1 Blue Gem,skin,1,0.007
 1,Blue Gem,skin,1,0.14
