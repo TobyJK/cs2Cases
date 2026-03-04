@@ -91,7 +91,7 @@ def assignFloat(skin):
     return [finalFloat, finalWear]
 
 # assign a rare pattern if one exists
-def assignRarePattern(skin : pd.DataFrame):
+def assignRarePattern(skin):
     patterns = rarePatterns[(rarePatterns["skinOrKnife"] == "skin") & (rarePatterns["skinid"] == skin.index[0])]
     pattern = random.choices(list(patterns.index) + [None], list(patterns["patternChance"]) + [1 - sum(patterns["patternChance"])])[0]
 
