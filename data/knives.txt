@@ -1,3 +1,13 @@
-0,Blue Steel,42,0,1,False,0
-1,Slaughter,39,0.01,0.26,False,0
-2,Slaughter,42,0.01,0.26,False,0
+1,Blue Steel,34,0,1,False,0
+2,Crimson Web,34,0.06,0.8,False,0
+3,Night,34,0.06,0.8,False,0
+4,Scorched,34,0.06,0.8,False,0
+5,Forest DDPAT,34,0.06,0.8,False,0
+6,Urban Masked,34,0.06,0.8,False,0
+7,Stained,34,0,1,False,0
+8,Vanilla,34,0,1,False,0
+9,Case Hardened,34,0,1,True,0
+10,Boreal Forest,34,0.06,0.8,False,0
+11,Safari Mesh,34,0.06,0.8,False,0
+12,Slaughter,34,0.01,0.26,False,0
+13,Fade,34,0,0.08,True,0
