@@ -69,6 +69,26 @@ def getOdds(minQ, maxQ):
     
     return qualities, [5 ** x for x in range(maxQ - minQ + 1)]
 
+# assign float to opened skin
+def assignFloat(skin):
+    wear = random.choices([0, 1, 2, 3, 4], [0.03, 0.24, 0.33, 0.24, 0.16])[0]
+    endPoint = database.wears[wear][0]
+    startPoint = 0 if wear == 0 else database.wears[wear - 1][0] + 0.01
+    basicFloat = random.uniform(startPoint, endPoint)
+
+    minFloat, maxFloat = float(skin["minFloat"].iloc[0]), float(skin["maxFloat"].iloc[0])
+
+    if minFloat == 0 and maxFloat == 1:
+        return [basicFloat, wear]
+
+    finalFloat = (basicFloat * (maxFloat - minFloat)) + minFloat
+    for w in database.wears:
+        if finalFloat < database.wears[w][0]:
+            finalWear = w
+            break
+
+    return [finalFloat, finalWear]
+
 # open a given case
 def caseOpenFromName(name):
     cType = cases[cases["name"] == name]["type"].iloc[0].lower()
@@ -90,3 +110,5 @@ def caseOpenFromName(name):
 
     elif cType == "souvenir":
         chosen = skinsPossible[skinsPossible["quality"] == qualityChosen].sample()
+
+    skinFloat, wear = assignFloat(chosen)

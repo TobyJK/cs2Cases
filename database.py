@@ -36,6 +36,14 @@ weapons = {
     51: 'Survival Knife', 52: 'Talon Knife', 53: 'Ursus Knife'
 }
 
+wears = {
+    0 : [0.07, "Factory New"],
+    1 : [0.15, "Minimal Wear"],
+    2 : [0.38, "Field Tested"],
+    3 : [0.45, "Well Worn"],
+    4 : [1, "Battle Scarred"]
+}
+
 """[0, x] means int, [1, x] means float, [2, x] means bool"""
 
 fields = {
