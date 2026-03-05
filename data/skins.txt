@@ -7,3 +7,39 @@
 6,Wings,11,2,0,0.14,True,False,False,0
 7,Skulls,23,2,0.1,0.26,True,False,False,0
 8,Ultraviolet,19,2,0.06,0.8,True,False,False,0
+9,Death by Kitty,26,5,0.08,0.32,True,False,False,1
+10,BOOM,12,4,0.06,0.28,True,False,False,1
+11,Red Laminate,10,4,0.06,0.8,True,False,False,1
+12,Splash,6,3,0.06,0.18,True,False,False,1
+13,Orange DDPAT,15,3,0.06,0.8,True,False,False,1
+14,Orange DDPAT,30,3,0.06,0.8,True,False,False,1
+15,Faded Zebra,17,2,0.06,0.8,True,False,False,1
+16,Doomkitty,13,2,0.08,0.22,True,False,False,1
+17,Memento,28,2,0.02,0.18,True,False,False,1
+18,Golden Koi,1,5,0,0.12,True,False,False,2
+19,Fire Serpent,10,5,0.06,0.76,True,False,False,2
+20,Graphite,12,4,0,0.12,True,False,False,2
+21,Ocean Foam,5,4,0,0.12,True,False,False,2
+22,Emerald Dragon,26,4,0.06,0.52,True,False,False,2
+23,Bright Water,16,3,0.1,0.22,True,False,False,2
+24,Overgrowth,9,3,0.06,0.8,True,False,False,2
+25,Zirka,17,3,0.06,0.42,True,False,False,2
+26,Graven,21,3,0.06,0.8,True,False,False,2
+27,Shattered,15,2,0.06,0.8,True,False,False,2
+28,Black Limba,2,2,0.06,0.8,True,False,False,2
+29,Wave Spray,19,2,0.06,0.8,True,False,False,2
+30,Demeter,14,2,0.06,0.8,True,False,False,2
+31,Tempest,29,2,0.06,0.22,True,False,False,2
+32,Bone Pile,27,2,0.06,0.34,True,False,False,2
+33,Blood in the Water,20,5,0.06,0.2,True,False,False,3
+34,Serum,9,4,0,0.25,True,False,False,3
+35,Cold Blooded,26,4,0,0.08,True,False,False,3
+36,Case Hardened,3,3,0,1,True,False,True,3
+37,Hypnotic,24,3,0,0.08,True,False,False,3
+38,Hemoglobin,2,3,0,0.2,True,False,False,3
+39,Graphite,29,3,0,0.12,True,False,False,3
+40,Blood Tiger,16,2,0,0.3,True,False,False,3
+41,Blue Titanium,8,2,0,0.04,True,False,False,3
+42,Hexane,13,2,0,0.4,True,False,False,3
+43,Crimson Web,18,2,0.06,0.8,True,False,False,3
+44,Hive,6,2,0,0.3,True,False,False,3

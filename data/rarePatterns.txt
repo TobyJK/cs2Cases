@@ -16,3 +16,5 @@
 15,Tier 1 Blue Gem,knife,43,0.002
 16,Blue Gem,knife,43,0.115
 17,Full Fade,knife,51,0.027
+18,Tier 1 Blue Gem,skin,36,0.006
+19,Blue Gem,skin,36,0.196
