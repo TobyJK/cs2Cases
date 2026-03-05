@@ -1,13 +1,65 @@
-1,Blue Steel,34,0,1,False,0
-2,Crimson Web,34,0.06,0.8,False,0
-3,Night,34,0.06,0.8,False,0
-4,Scorched,34,0.06,0.8,False,0
-5,Forest DDPAT,34,0.06,0.8,False,0
-6,Urban Masked,34,0.06,0.8,False,0
-7,Stained,34,0,1,False,0
-8,Vanilla,34,0,1,False,0
-9,Case Hardened,34,0,1,True,0
-10,Boreal Forest,34,0.06,0.8,False,0
-11,Safari Mesh,34,0.06,0.8,False,0
-12,Slaughter,34,0.01,0.26,False,0
-13,Fade,34,0,0.08,True,0
+0,Blue Steel,34,0,1,False,0
+1,Crimson Web,34,0.06,0.8,False,0
+2,Night,34,0.06,0.8,False,0
+3,Scorched,34,0.06,0.8,False,0
+4,Forest DDPAT,34,0.06,0.8,False,0
+5,Urban Masked,34,0.06,0.8,False,0
+6,Stained,34,0,1,False,0
+7,Vanilla,34,0,1,False,0
+8,Case Hardened,34,0,1,True,0
+9,Boreal Forest,34,0.06,0.8,False,0
+10,Safari Mesh,34,0.06,0.8,False,0
+11,Slaughter,34,0.01,0.26,False,0
+12,Fade,34,0,0.08,True,0
+13,Slaughter,39,0.01,0.26,False,0
+14,Scorched,39,0.06,0.8,False,0
+15,Blue Steel,39,0,1,False,0
+16,Vanilla,39,0,1,False,0
+17,Fade,39,0,0.08,True,0
+18,Case Hardened,39,0,1,True,0
+19,Forest DDPAT,39,0.06,0.8,False,0
+20,Urban Masked,39,0.06,0.8,False,0
+21,Crimson Web,39,0.06,0.8,False,0
+22,Safari Mesh,39,0.06,0.8,False,0
+23,Stained,39,0,1,False,0
+24,Boreal Forest,39,0.06,0.8,False,0
+25,Night,39,0.06,0.8,False,0
+26,Crimson Web,40,0.06,0.8,False,0
+27,Scorched,40,0.06,0.8,False,0
+28,Case Hardened,40,0,1,True,0
+29,Night,40,0.06,0.8,False,0
+30,Blue Steel,40,0,1,False,0
+31,Vanilla,40,0,1,False,0
+32,Slaughter,40,0.01,0.26,False,0
+33,Boreal Forest,40,0.06,0.8,False,0
+34,Stained,40,0,1,False,0
+35,Safari Mesh,40,0.06,0.8,False,0
+36,Fade,40,0,0.08,True,0
+37,Forest DDPAT,40,0.06,0.8,False,0
+38,Urban Masked,40,0.06,0.8,False,0
+39,Forest DDPAT,42,0.06,0.8,False,0
+40,Crimson Web,42,0.06,0.8,False,0
+41,Slaughter,42,0.01,0.26,False,0
+42,Night,42,0.06,0.8,False,0
+43,Case Hardened,42,0,1,True,0
+44,Urban Masked,42,0.06,0.8,False,0
+45,Blue Steel,42,0,1,False,0
+46,Stained,42,0,1,False,0
+47,Boreal Forest,42,0.06,0.8,False,0
+48,Scorched,42,0.06,0.8,False,0
+49,Vanilla,42,0,1,False,0
+50,Safari Mesh,42,0.06,0.8,False,0
+51,Fade,42,0,0.08,True,0
+52,Slaughter,44,0.01,0.26,False,0
+53,Forest DDPAT,44,0.06,0.8,False,0
+54,Boreal Forest,44,0.06,0.8,False,0
+55,Safari Mesh,44,0.06,0.8,False,0
+56,Crimson Web,44,0.06,0.8,False,0
+57,Case Hardened,44,0,1,True,0
+58,Stained,44,0,1,False,0
+59,Urban Masked,44,0.06,0.8,False,0
+60,Vanilla,44,0,1,False,0
+61,Scorched,44,0.06,0.8,False,0
+62,Night,44,0.06,0.8,False,0
+63,Blue Steel,44,0,1,False,0
+64,Fade,44,0,0.08,True,0
