@@ -115,11 +115,25 @@ def caseOpenFromName(name):
             chosen = knivesPossible.sample()
         else:
             chosen = skinsPossible[skinsPossible["quality"] == qualityChosen].sample()
+        
+        if random.random() < 0.1:
+            statOrSouv = "stat"
+        else:
+            statOrSouv = None
 
     elif cType == "souvenir":
         chosen = skinsPossible[skinsPossible["quality"] == qualityChosen].sample()
+        statOrSouv = "souv"
+    
+    else:
+        statOrSouv = None
 
     skinFloat, wear = assignFloat(chosen)
 
     if chosen["hasRarePattern"].iloc[0]:
         pattern = assignRarePattern(chosen)
+    else:
+        pattern = None
+    
+    skinOpened = {"name" : chosen["name"].iloc[0], "weaponid" : int(chosen["weaponid"].iloc[0]), "skinid" : int(chosen.index[0]), "quality" : qualityChosen,"wear" : wear, "float" : skinFloat, "statOrSouv" : statOrSouv, "pattern" : pattern}
+    return skinOpened
