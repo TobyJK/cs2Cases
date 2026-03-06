@@ -20,3 +20,9 @@
 19,Blue Gem,skin,36,0.196
 20,Blue Hives,skin,59,0.11
 21,Orange Hives,skin,59,0.15
+22,Tier 1 Blue Gem,knife,71,0.004
+23,Blue Gem,knife,71,0.124
+24,Full Fade,knife,77,0.027
+25,Tier 1 Blue Gem,knife,79,0.006
+26,Blue Gem,knife,79,0.145
+27,Full Fade,knife,90,0.027

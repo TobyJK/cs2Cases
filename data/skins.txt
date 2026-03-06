@@ -141,3 +141,32 @@
 140,Ricochet,11,2,0,0.8,True,False,False,16
 141,Yorick,30,2,0,1,True,False,False,16
 142,Outbreak,18,2,0,0.5,True,False,False,16
+143,Vulcan,10,5,0,0.9,True,False,False,8
+144,Desert-Strike,17,5,0,0.7,True,False,False,8
+145,Atomic Alloy,16,4,0,0.9,True,False,False,8
+146,Caiman,9,4,0,0.4,True,False,False,8
+147,Cyrex,18,4,0,0.5,True,False,False,8
+148,Torque,11,3,0,0.5,True,False,False,8
+149,Antique,25,3,0,0.5,True,False,False,8
+150,Tatter,21,3,0,0.5,True,False,False,8
+151,Heaven Guard,31,3,0.03,0.5,True,False,False,8
+152,Isaac,8,2,0,1,True,False,False,8
+153,Kami,15,2,0,0.6,True,False,False,8
+154,Pulse,5,2,0,0.6,True,False,False,8
+155,Module,26,2,0,0.35,True,False,False,8
+156,Slashed,20,2,0.15,0.8,True,False,False,8
+157,Twist,0,2,0,1,True,False,False,8
+158,Cyrex,16,5,0,0.5,True,False,False,9
+159,Asiimov,26,5,0,0.92,True,False,False,9
+160,Water Elemental,4,4,0,0.7,True,False,False,9
+161,Conspiracy,1,4,0,0.3,True,False,False,9
+162,Fowl Play,3,4,0,1,True,False,False,9
+163,Osiris,25,3,0,0.5,True,False,False,9
+164,Supernova,6,3,0,0.4,True,False,False,9
+165,Tigris,0,3,0,1,True,False,False,9
+166,Koi,29,3,0,0.3,True,False,False,9
+167,Abyss,20,2,0,1,True,False,False,9
+168,Urban Hazard,23,2,0,0.5,True,False,False,9
+169,Ivory,5,2,0,1,True,False,False,9
+170,Labyrinth,27,2,0,0.4,True,False,False,9
+171,Desert-Strike,33,2,0,0.5,True,False,False,9

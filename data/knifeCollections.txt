@@ -1,1 +1,3 @@
 0,Weapon Case Knives
+1,Huntsman Knives
+2,Butterfly Knives
