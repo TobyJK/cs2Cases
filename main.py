@@ -25,6 +25,7 @@ knives = pd.DataFrame.from_dict(database.knives, orient='index')
 knifeCollections = pd.DataFrame.from_dict(database.knifeCollections, orient='index')
 knifeCollectionCases = pd.DataFrame.from_dict(database.knifeCollectionCases, orient='index')
 rarePatterns = pd.DataFrame.from_dict(database.rarePatterns, orient='index')
+inventory = pd.DataFrame.from_dict(database.inventory, orient='index')
 
 def getSkinsFromCase(name):
     cNumber = cases[cases["name"] == name].index[0]
@@ -97,6 +98,23 @@ def assignRarePattern(skin):
 
     return pattern
 
+# save an opened skin to the inventory
+def writeToInventory(skin):
+    with open(f"data/inventory.txt") as f:
+        counter = f.readlines()
+        nextID = len(counter)
+
+    with open("data/inventory.txt", "a") as f:
+        f.write(f"{nextID}," + ",".join([str(skin[x]) for x in skin]) + "\n")
+
+# create a useful display of a given skin
+def displaySkin(skin):
+    out = (f"{database.qualities[skin["quality"]].capitalize()} - {f'{database.stattrak[skin["statOrSouv"]]} ' if skin["statOrSouv"] else ''}" + 
+    f"{database.weapons[skin["weaponid"]]} | {skins.loc[skin["skinid"]]["name"] if skin["quality"] < 6 else knives.loc[skin["skinid"]]["name"]} ({database.wears[skin["wear"]][1]})" + 
+    f"{f', {rarePatterns[rarePatterns["patternid"] == skin["pattern"]]["name"]}' if skin["pattern"] != -1 else ''}")
+    
+    return out
+
 # open a given case
 def caseOpenFromName(name):
     cType = cases[cases["name"] == name]["type"].iloc[0].lower()
@@ -117,23 +135,25 @@ def caseOpenFromName(name):
             chosen = skinsPossible[skinsPossible["quality"] == qualityChosen].sample()
         
         if random.random() < 0.1:
-            statOrSouv = "stat"
+            statOrSouv = 1
         else:
-            statOrSouv = None
+            statOrSouv = 0
 
     elif cType == "souvenir":
         chosen = skinsPossible[skinsPossible["quality"] == qualityChosen].sample()
-        statOrSouv = "souv"
+        statOrSouv = 2
     
     else:
-        statOrSouv = None
+        statOrSouv = 0
 
     skinFloat, wear = assignFloat(chosen)
 
     if chosen["hasRarePattern"].iloc[0]:
         pattern = assignRarePattern(chosen)
     else:
-        pattern = None
+        pattern = -1
     
-    skinOpened = {"name" : chosen["name"].iloc[0], "weaponid" : int(chosen["weaponid"].iloc[0]), "skinid" : int(chosen.index[0]), "quality" : qualityChosen,"wear" : wear, "float" : skinFloat, "statOrSouv" : statOrSouv, "pattern" : pattern}
+    skinOpened = {"skinid" : int(chosen.index[0]), "weaponid" : int(chosen["weaponid"].iloc[0]), "quality" : qualityChosen, "wear" : wear, "float" : skinFloat, "statOrSouv" : statOrSouv, "pattern" : pattern}
+    writeToInventory(skinOpened)
+    print(displaySkin(skinOpened))
     return skinOpened
